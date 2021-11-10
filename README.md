@@ -44,9 +44,16 @@ format:
   }
 }
 ```
+Example:
+
+```text
+      "url": "rtsp://username:password@192.168.0.201:554/cam/realmonitor?channel=1&subtype=0"
+      "url": "rtsp://username:password@192.168.0.203:554/cam/realmonitor?channel=1&subtype=0"
+      "url": "rtsp://username:password@39.172.100.87:37801/cam/realmonitor?channel=1&subtype=0"
+```
 
 ## Limitations
-
+http://localhost:8083/play/hls/H265/segment/20/file.ts
 Video Codecs Supported: H264 all profiles
 
 Audio Codecs Supported: AAC

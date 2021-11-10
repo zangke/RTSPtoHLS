@@ -2,18 +2,19 @@ package main
 
 import (
 	"bytes"
+	"github.com/deepch/vdk/format/ts"
+	"github.com/gin-contrib/cors"
 	"log"
 	"net/http"
 	"sort"
 	"time"
-
-	"github.com/deepch/vdk/format/ts"
 
 	"github.com/gin-gonic/gin"
 )
 
 func serveHTTP() {
 	router := gin.Default()
+	router.Use(cors.Default())
 	gin.SetMode(gin.DebugMode)
 	router.LoadHTMLGlob("web/templates/*")
 	router.GET("/", func(c *gin.Context) {
